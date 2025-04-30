@@ -23,27 +23,15 @@ Simple Encryption Algorithm and Firewall application
     - `encrypt_message(binary_message, h)`  
     - `decrypt_message(encrypted_text_list, e, q, w)`  
 
-### Usage Example  
+### Usage Example
 ```bash
 $ python Encryption.py
 Enter the text to encrypt: Hello, world!
-Encrypted output: [ ... ]
 Decrypted binary to Text: Hello, world!
+```
 
 
-## Task 2: CLI Firewall Rule Manager (`Firewall.py`)
-
-### Files  
-- **`Firewall.py`**  
-  - **Core class**: `Firewall`  
-    - `add_rule_command(rule_number=None, direction=None, address=None)`  
-    - `remove_rule_command(rule_number, direction=None)`  
-    - `list_rules_command(rule_number=None, direction=None, address=None)`  
-    - Utility methods for IP validation and range checking  
-  - **Parser**: `parse_input(input_str)`  
-  - **Interactive loop**: supports `add` / `remove` / `list` / `syntax` / `exit`
-
-### Usage Example  
+## CLI Firewall Rule Manager (Firewall.py)
 ```bash
 $ python Firewall.py
 Welcome to F20CN Firewall Task!!
@@ -63,3 +51,4 @@ Rule removed: {'rule_number': 1, 'direction': '-in', 'address': '192.168.1.0-192
 
 > exit
 Exiting firewall management, Goodbye......
+```
