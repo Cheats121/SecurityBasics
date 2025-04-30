@@ -1,16 +1,15 @@
-# SecurityBasics
-Simple Encryption Algorithm and Firewall application 
--------------------------------------------------------------
-# Task Report
+# SecurityBasics  
+Simple Encryption Algorithm and Firewall application  
+----------------------------------------------------------
 
-This repository contains implementations for two main components:
+# Task Report
 
 - **Task 1**: `Encryption.py` – A Merkle–Hellman–style knapsack encryption/decryption system.  
 - **Task 2**: `Firewall.py` – A CLI-based firewall rule management tool.
 
 ---
 
-## Task 1: Merkle–Hellman-Style Encryption (`Encryption.py`)
+## Task 1: Merkle–Hellman–Style Encryption (`Encryption.py`)
 
 ### Files  
 - `Encryption.py`:  
@@ -28,14 +27,25 @@ This repository contains implementations for two main components:
 ```bash
 $ python Encryption.py
 Enter the text to encrypt: Hello, world!
+Encrypted output: [ ... ]
 Decrypted binary to Text: Hello, world!
+
+
+## Task 2: CLI Firewall Rule Manager (`Firewall.py`)
+
+### Files  
+- **`Firewall.py`**  
+  - **Core class**: `Firewall`  
+    - `add_rule_command(rule_number=None, direction=None, address=None)`  
+    - `remove_rule_command(rule_number, direction=None)`  
+    - `list_rules_command(rule_number=None, direction=None, address=None)`  
+    - Utility methods for IP validation and range checking  
+  - **Parser**: `parse_input(input_str)`  
+  - **Interactive loop**: supports `add` / `remove` / `list` / `syntax` / `exit`
+
+### Usage Example  
 ```bash
-
-## Task 2: CLI Firewall Rule Manager (Firewall.py)
-
-### Usage Example
 $ python Firewall.py
-```bash
 Welcome to F20CN Firewall Task!!
 To add:    add [rule_number] [-in|-out] [address]
 To remove: remove [rule_number] [-in|-out]
@@ -53,4 +63,3 @@ Rule removed: {'rule_number': 1, 'direction': '-in', 'address': '192.168.1.0-192
 
 > exit
 Exiting firewall management, Goodbye......
-```bash
